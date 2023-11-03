@@ -1,0 +1,26 @@
+
+
+$prefix: 'f-';
+$prefix-theme-dark: $prefix + 'theme-dark';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #region COMPONENTS */
+@import './components/button';
+@import './components/card';
+@import './components/dropdown';
+@import './components/page';
+@import './components/layout';
+@import './components/form';
+@import './components/input';
+
+
+@import './components/sidebar';
+
+
+
+/* #endregion COMPONENTS */
+
+

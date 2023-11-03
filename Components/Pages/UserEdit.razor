@@ -1,0 +1,22 @@
+@page "/users/edit/{Id}";
+@page "/users/create";
+
+<EditPage Title="@(Id == String.Empty ? "Create User" : "Edit User")">
+    <HeaderActions>
+        <Button>Back</Button>
+        <Button Color="primary">Save</Button>
+    </HeaderActions>
+    <Content>
+        <FormInput Type="email" Placeholder="Enter Email address..." Label="Email" />
+        <FormInput Type="password" Placeholder="Enter Password..." Label="Password" Required />
+    </Content>
+    <FooterActions>
+        <Button>Back</Button>
+        <Button Color="primary">Submit</Button>
+    </FooterActions>
+</EditPage>
+
+@code {
+    [Parameter]
+    public string Id {get; set;}
+}
