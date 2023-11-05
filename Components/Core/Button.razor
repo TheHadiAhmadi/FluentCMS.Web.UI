@@ -1,12 +1,22 @@
+@if (Href != String.Empty) {
+<a class="f-button f-button-color-@Color" href=@Href type="button" @attributes="RestProps">
+    @ChildContent
+</a>
+
+} else {
 <button class="f-button f-button-color-@Color" type="button" @attributes="RestProps">
     @ChildContent
 </button>
+
+}
 
 @code {
 
     [Parameter]
     public string Color {get; set;} = "default";
 
+    [Parameter]
+    public string Href {get; set;} = "";
 
     [Parameter]
     public RenderFragment ChildContent {get; set;}

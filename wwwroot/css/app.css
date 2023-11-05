@@ -31,6 +31,25 @@
   @apply ring-blue-800;
 }
 
+.f-button-color-danger {
+  @apply text-white bg-red-700;
+}
+.f-button-color-danger:hover {
+  @apply bg-red-800;
+}
+.f-button-color-danger:focus {
+  @apply ring-red-300;
+}
+.f-theme-dark .f-button-color-danger {
+  @apply bg-red-600;
+}
+.f-theme-dark .f-button-color-danger:hover {
+  @apply bg-red-700;
+}
+.f-theme-dark .f-button-color-danger:focus {
+  @apply ring-red-800;
+}
+
 .f-button-color-default {
   @apply text-gray-900 bg-white border border-gray-200;
 }
@@ -51,7 +70,10 @@
 }
 
 .f-button-group {
-  @apply flex flex-wrap justify-end gap-2;
+  @apply flex justify-end gap-2;
+}
+.f-button-group:not(.f-button-group-no-wrap) {
+  @apply flex-wrap;
 }
 
 .f-card {
@@ -156,6 +178,40 @@
 }
 .f-theme-dark .f-input:focus {
   @apply ring-blue-500 border-blue-500;
+}
+
+.f-table-parent {
+  @apply relative overflow-x-auto shadow-md;
+}
+@screen sm {
+  .f-table-parent {
+    @apply rounded-lg;
+  }
+}
+
+.f-table {
+  @apply w-full text-sm text-left text-gray-500;
+}
+.f-theme-dark .f-table {
+  @apply text-gray-400;
+}
+.f-table-head {
+  @apply text-xs text-gray-700 uppercase bg-gray-50;
+}
+.f-theme-dark .f-table-head {
+  @apply bg-gray-700 text-gray-400;
+}
+.f-table-row {
+  @apply bg-white border-b;
+}
+.f-table-row .f-theme-dark {
+  @apply bg-gray-900 border-gray-700;
+}
+.f-table-cell {
+  @apply px-6 py-3;
+}
+.f-table-cell-small {
+  @apply w-0;
 }
 
 .f-sidebar {

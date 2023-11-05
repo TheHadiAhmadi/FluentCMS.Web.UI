@@ -35,6 +35,28 @@ $prefix-button: $prefix + "button";
   }
 }
 
+.#{$prefix-button}-color-danger {
+  @apply text-white bg-red-700;
+  &:hover {
+    @apply bg-red-800;
+  }
+
+  &:focus {
+    @apply ring-red-300;
+  }
+
+  .#{$prefix-theme-dark} & {
+    @apply bg-red-600;
+  }
+
+  .#{$prefix-theme-dark} &:hover {
+    @apply bg-red-700;
+  }
+  .#{$prefix-theme-dark} &:focus {
+    @apply ring-red-800;
+  }
+}
+
 .#{$prefix-button}-color-default {
   @apply text-gray-900 bg-white border border-gray-200;
 
@@ -59,5 +81,9 @@ $prefix-button: $prefix + "button";
 }
 
 .#{$prefix-button}-group {
-  @apply flex flex-wrap justify-end gap-2;
+  @apply flex justify-end gap-2;
+
+  &:not(.#{$prefix-button}-group-no-wrap) {
+    @apply flex-wrap;
+  }
 }

@@ -1,0 +1,34 @@
+@page "/users"
+
+<ListPage Title="User">
+    <HeaderActions>
+        <Button href="/users/create" Color="primary">Create</Button>
+    </HeaderActions>
+    <TableHead>
+        <TableCell>Id</TableCell>
+        <TableCell>Name</TableCell>
+        <TableCell>Username</TableCell>
+        <TableCell SmallWidth>Actions</TableCell>
+    
+    </TableHead>
+    <TableBody>
+        @for (var i = 0; i < 10; i++)
+        {
+            <TableRow>
+                <TableCell>@i</TableCell>
+                <TableCell>Name @i</TableCell>
+                <TableCell>Username @i</TableCell>
+                <TableCell>
+                    <ButtonGroup NoWrap>
+                        <Button Href=@("/users/edit/" + @i)>Edit</Button>
+                        <Button Color="danger">Remove</Button>
+                    </ButtonGroup>
+                </TableCell>
+            </TableRow>
+        }
+    </TableBody>
+</ListPage>
+
+@code {
+
+}
